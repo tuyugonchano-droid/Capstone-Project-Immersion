@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #f3f4f6;
+}
+
+/* ===== HEADER (Logo + Title) ===== */
+
+#head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: #0b59d8;
+    margin-top: 60px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+nav {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.text{
+    text-align: center;
+}
+
+.img {
+    border-radius: 20px;
+    width: 90px;
+    height: auto;
+    
+}
+
+/* ===== BACK BUTTON ===== */
+
+.back {
+    padding: 12px 25px;
+    background-color: #0b59d8;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    display: inline-block;
+    margin-bottom: 20px;
+    transition: 0.2s;
+}
+
+.back:hover {
+    background-color: #0948ad;
+}
+
+/* ===== LOGIN BOX ===== */
+
+.login-box {
+    padding: 35px 30px;
+    background-color: white;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    margin: 0 auto 60px auto; /* centered horizontally */
+}
+
+/* ===== TEXT ===== */
+
+h2 {
+    margin-bottom: 5px;
+    color: #0b59d8;
+}
+
+.textcred {
+    margin-top: 2px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* ===== INPUTS ===== */
+
+input {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-top: 14px;
+    box-sizing: border-box;
+    transition: 0.2s;
+}
+
+input:focus {
+    border-color: #0b59d8;
+    outline: none;
+}
+
+/* ===== BUTTON ===== */
+
+#btn-login {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px 0;
+    color: white;
+    font-size: 15px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    background-color: #0b59d8;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#btn-login:hover {
+    background-color: #0948ad;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+
+@media (max-width: 480px) {
+
+    #head {
+        margin-top: 40px;
+    }
+
+    .img {
+        width: 70px;
+    }
+
+    .login-box {
+        padding: 25px 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input {
+        font-size: 14px;
+    }
+
+    #btn-login {
+        font-size: 14px;
+    }
+}
+
+
+

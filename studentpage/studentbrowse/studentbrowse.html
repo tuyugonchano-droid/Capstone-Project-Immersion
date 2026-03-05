@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Company Page</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="studentbrowse.css">
+
+</head>
+
+<body>
+
+<header>
+  <div class="header-container">
+
+        <div class="header-left">
+            <img src="../../logo container/logodilaw.png" class="header-logo" alt="Logo">
+            <h2 class="site-title">Immersion Hub</h2>
+        </div>
+
+        <div class="header-right">
+            <div class="profile" id="profileBtn">
+                <img src="profile.jpg" class="profile-img">
+                <span class="profile-name">Nigga</span>
+            </div>
+             <div class="dropdown-menu" id="dropdownMenu">
+               <button id="logoutBtn">Log out</button>
+             </div>
+        </div>
+
+    </div>
+
+    <div class="tabs">
+        <button class="tab active" data-category="all">ALL</button>
+        <button class="tab" data-category="ABM">ABM</button>
+        <button class="tab" data-category="HUMSS">HUMSS</button>
+        <button class="tab" data-category="STEM">STEM</button>
+        <button class="tab" data-category="IT-MAWT">IT MAWT</button>
+        <button class="tab" data-category="Digital Arts">Digital Arts</button>
+        <button class="tab" data-category="Culinary Arts">Culinary Arts</button>
+        <button class="tab" data-category="TOP">TOP</button>
+    </div>
+</header>
+
+<!-- Logo Section -->
+<section id="groupLogo">
+ 
+    <h2>Welcome to Our Partner Companies</h2>
+    <p>Select a strand above to view companies.</p>
+</section>
+
+<!-- Company Container -->
+<section class="company-container" id="companyContainer">
+
+    <div class="card" data-category="ABM">
+        <h3>ABC Accounting Firm</h3>
+        <p>Business internship opportunity</p>
+    </div>
+
+    <div class="card" data-category="STEM">
+        <h3>Future Science Lab</h3>
+        <p>Engineering research company</p>
+    </div>
+
+    <div class="card" data-category="IT-MAWT">
+        <h3>WebTech Solutions</h3>
+        <p>Web and mobile development</p>
+    </div>
+
+    <div class="card" data-category="Digital Arts">
+        <h3>Creative Pixel Studio</h3>
+        <p>Multimedia design agency</p>
+    </div>
+
+    <div class="card" data-category="Culinary Arts">
+        <h3>Chef Masters Inc.</h3>
+        <p>Restaurant training company</p>
+    </div>
+
+    <div class="card" data-category="HUMSS">
+        <h3>Media Research Hub</h3>
+        <p>Social research organization</p>
+    </div>
+
+    <div class="card" data-category="TOP">
+        <h3>TechSkills Center</h3>
+        <p>Technical vocational training</p>
+    </div>
+
+</section>
+
+<script src="studentbrowse.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,455 @@
+/* ============================
+   TOPBAR
+============================ */
+.topbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#logo {
+    width: 50px;
+    height: auto;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#logotext {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #004AAD;
+}
+
+#stilogo {
+    margin: 0;
+    font-size: 12px;
+    color: #666;
+}
+
+.right-section {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.profile-pic {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #f4b400;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-name {
+    margin: 0;
+    font-weight: 600;
+}
+
+.profile-role {
+    font-size: 12px;
+    color: gray;
+}
+
+/* ============================
+   MAIN SECTION LAYOUT
+============================ */
+.section-container {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    height: 100vh;
+}
+
+/* ============================
+   CARDS (Calendar, Timer, Assignment)
+============================ */
+.calendar-container,
+.timer-container,
+.assignment-container,
+.journal-card {
+    width: 350px;
+    height: 400px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 20px;
+}
+
+/* ============================
+   HEADERS INSIDE CARDS
+============================ */
+.calendar-header,
+.timer-header,
+.assignment-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.calendar-icon,
+.timer-icon,
+.assignment-icon {
+    width: 60px;
+    border-radius: 5px;
+}
+.calendar-container {
+    width: 350px;
+    height: 400px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;    /* prevents buhaghag layout */
+}
+
+/* ============================
+   CALENDAR
+============================ */
+#calendar {
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 70%;
+    font-weight: lighter;
+    flex: 1;             /* take remaining space */
+    width: 100%;
+    min-height: 0;
+}
+
+/* FullCalendar styles */
+.fc .fc-toolbar-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
+}
+
+.fc .fc-button {
+    background-color: #ffffff !important;
+    color: #000 !important;
+    border: 1px solid #ddd !important;
+    font-size: 12px;
+}
+
+/* ============================
+   TIMER
+============================ */
+#time {
+    font-size: 32px;
+    padding: 12px 16px;
+    width: 200px;
+    border-radius: 8px;
+    margin-top: 70px;
+    margin-left: 50px;
+}
+
+/* ============================
+   ASSIGNMENT
+============================ */
+/* =========================
+   ASSIGNMENT CONTAINER FIX
+========================= */
+
+.assignment-container {
+    width: 350px;
+    height: 400px; /* keep your original design */
+
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.assignment-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.assignment-icon {
+    width: 60px;
+}
+
+/* =========================================
+   COMPANY INFO
+========================================= */
+
+.assignment-content {
+    text-align: center;
+    margin-top: 20px;
+    flex-shrink: 0;
+}
+
+.assignment-company {
+    font-size: 20px;
+    font-weight: 600;
+    color: #004AAD;
+}
+
+.assignment-status {
+    font-size: 14px;
+    color: gray;
+}
+
+/* =========================================
+   TODO SECTION
+========================================= */
+
+.assignment-todo {
+    margin-top: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* prevent double scroll */
+}
+
+/* SCROLL HAPPENS HERE */
+
+.todo-card {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 5px; /* space for scrollbar */
+
+    background: #f8f9fb;
+    border-radius: 15px;
+    box-shadow: inset 0 0 0 1px #e6e9ef;
+}
+
+/* Optional smooth thin scrollbar */
+
+.todo-card::-webkit-scrollbar {
+    width: 6px;
+}
+
+.todo-card::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+.todo-card::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* =========================================
+   TODO ITEMS
+========================================= */
+
+.todo-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 15px 18px;
+    border-bottom: 1px solid #e4e6eb;
+}
+
+.todo-item:last-child {
+    border-bottom: none;
+}
+
+.todo-checkbox {
+    width: 18px;
+    height: 18px;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.todo-title {
+    font-weight: 600;
+    margin: 0;
+}
+
+.todo-due {
+    font-size: 13px;
+    color: #7a8599;
+    margin: 3px 0 0 0;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .assignment-container {
+        width: 100%;
+        height: 380px; /* slightly smaller for mobile */
+    }
+
+    .assignment-content {
+        margin-top: 15px;
+    }
+
+    .todo-item {
+        padding: 12px 14px;
+        gap: 10px;
+    }
+
+    .todo-title {
+        font-size: 14px;
+    }
+
+    .todo-due {
+        font-size: 12px;
+    }
+}
+
+/* ===============================
+   JOURNAL CARD
+================================= */
+
+.journal-card {
+    width: 350px;
+    height: 380px;       /* FIXED WIDTH */
+    max-width: 100%;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    margin-top: 30px;
+    flex: 0 0 350px;
+    flex-direction: column;
+    display: flex;
+}
+
+/* ===============================
+   HEADER (ICON + TEXT)
+================================= */
+
+.journal-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.journal-heading {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.journalicon {
+    width: 40px;
+    height: auto;
+}
+
+/* ===============================
+   UPLOAD SECTION
+================================= */
+
+.journal-upload-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* ===============================
+   BUTTONS
+================================= */
+
+.select-btn,
+.upload-btn {
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.select-btn {
+    background: #eef2ff;
+    color: #004AAD;
+    padding: 10px 20px;
+}
+
+.select-btn:hover {
+    background: #004AAD;
+    color: white;
+}
+
+.upload-btn {
+    background: linear-gradient(135deg, #004AAD, #2563eb);
+    color: white;
+    padding: 10px 25px;
+}
+
+.upload-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+}
+
+.upload-btn:disabled {
+    background: #cbd5e1;
+    cursor: not-allowed;
+}
+
+/* ===============================
+   TEXT
+================================= */
+
+.journal-file-name,
+.journal-status {
+    font-size: 13px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+
+    .journal-card {
+        max-width: 100%;
+    }
+
+    .select-btn,
+    .upload-btn {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .journal-card {
+        width: 100%;
+        flex: none;
+    }
+}

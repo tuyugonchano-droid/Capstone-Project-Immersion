@@ -1,0 +1,474 @@
+/* ============================
+   TOPBAR
+============================ */
+
+.topbar {
+    display: flex;
+    align-items: center;
+    padding: 18px 25px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    flex-wrap: wrap; /* important for mobile */
+}
+
+/* ============================
+   LEFT SECTION (Logo + Text)
+============================ */
+
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#logo {
+    width: 50px;
+    height: auto;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#logotext {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #004AAD;
+}
+
+#stilogo {
+    margin: 0;
+    font-size: 12px;
+    color: #666;
+}
+
+/* ============================
+   RIGHT SECTION (Profile)
+============================ */
+
+.right-section {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.profile-pic {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #f4b400;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-name {
+    margin: 0;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.profile-role {
+    font-size: 12px;
+    color: gray;
+}
+
+/* ============================
+   RESPONSIVE BREAKPOINT
+============================ */
+
+@media (max-width: 768px) {
+
+    .topbar {
+        padding: 15px;
+    }
+
+    #logo {
+        width: 40px;
+    }
+
+    #logotext {
+        font-size: 16px;
+    }
+
+    #stilogo {
+        font-size: 11px;
+    }
+
+    .profile-pic {
+        width: 38px;
+        height: 38px;
+    }
+
+    .profile-name {
+        font-size: 13px;
+    }
+
+    .profile-role {
+        font-size: 11px;
+    }
+}
+
+/* ============================
+   EXTRA SMALL PHONES
+============================ */
+
+@media (max-width: 480px) {
+
+    .profile-info {
+        display: none; /* hide name on very small screens */
+    }
+
+    .profile-pic {
+        width: 35px;
+        height: 35px;
+    }
+
+}
+
+/* ===============================
+   TOGGLE BUTTON
+================================= */
+
+.registercompany {
+    max-width: 500px;
+    margin: 60px auto 20px auto;
+    padding: 0 20px;
+    
+}
+
+.toggle-btn {
+    width: 100%;
+    padding: 16px;
+    border-radius: 25px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #2b6edc, #004AAD);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.toggle-btn:hover {
+    transform: scale(1.02);
+}
+
+/* ===============================
+   FORM WRAPPER
+================================= */
+
+.form-wrapper {
+    max-width: 500px;
+    margin: 0 auto 60px auto;
+    padding: 0 20px;
+}
+
+#registerForm {
+    display: none; /* hidden by default */
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* ===============================
+   INPUTS (TEXT & PASSWORD)
+================================= */
+
+#registerForm input[type="text"],
+#registerForm input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+#registerForm input:focus {
+    border-color: #004AAD;
+    outline: none;
+}
+
+/* ===============================
+   COURSES (DROPDOWN)
+================================= */
+
+.course-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#registerForm select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+#registerForm select:focus {
+    border-color: #004AAD;
+    outline: none;
+}
+
+/* ===============================
+   FILE UPLOAD BUTTONS (NEW)
+================================= */
+
+/* Styling the file input container */
+#registerForm input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: #F9A825; /* Yung kulay na gusto mo */
+    color: white;
+    cursor: pointer;
+}
+
+/* Styling the actual "Choose File" button inside the input */
+#registerForm input[type="file"]::file-selector-button {
+    background-color: #004AAD; /* Blue button para magkaka-contrast sa yellow background */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#registerForm input[type="file"]::file-selector-button:hover {
+    background-color: #003580;
+}
+
+/* ===============================
+   REGISTER BUTTON
+================================= */
+
+.btn-register {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    background: #004AAD;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-register:hover {
+    background: #003580;
+}
+
+/* ===============================
+   MOBILE ADJUSTMENTS
+================================= */
+
+@media (max-width: 480px) {
+
+    .toggle-btn {
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    #registerForm {
+        padding: 20px;
+    }
+    
+    #registerForm input[type="file"] {
+        font-size: 12px; /* Para hindi ma-cut ang text sa mobile */
+    }
+}
+
+
+.teacher-dashboard {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.teacher-dashboard h2 {
+    text-align: center;
+    color: #004AAD;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+/* Scrollable List Container */
+.student-list-container {
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* Scrollbar Styling */
+.student-list-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.student-list-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.student-list-container::-webkit-scrollbar-thumb {
+    background: #004AAD;
+    border-radius: 10px;
+}
+
+/* Student Card Styling */
+.student-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-left: 5px solid #F9A825;
+    transition: 0.3s;
+}
+
+.student-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.student-card h3 {
+    margin: 0 0 10px 0;
+    color: #004AAD;
+    font-size: 18px;
+}
+
+.student-card p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+/* Status Badge */
+.status-pending {
+    background: #FFC107;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+.status-approved {
+    background: #4CAF50;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+/* ===============================
+   RESPONSIVE MEDIA QUERIES
+================================= */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+    .teacher-dashboard {
+        padding: 15px;
+    }
+
+    .teacher-dashboard h2 {
+        font-size: 20px;
+    }
+
+    .student-card {
+        padding: 15px;
+    }
+
+    .student-card h3 {
+        font-size: 16px;
+    }
+
+    .student-card p {
+        font-size: 13px;
+    }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+    .teacher-dashboard {
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .teacher-dashboard h2 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .student-list-container {
+        max-height: 400px;
+    }
+
+    .student-card {
+        padding: 15px;
+        margin-bottom: 10px;
+    }
+
+    .student-card h3 {
+        font-size: 16px;
+    }
+
+    .student-card p {
+        font-size: 12px;
+    }
+
+    .status-pending,
+    .status-approved {
+        font-size: 10px;
+        padding: 2px 8px;
+    }
+}
+
+/* Small Mobile (320px and below) */
+@media (max-width: 320px) {
+    .teacher-dashboard {
+        padding: 5px;
+    }
+
+    .teacher-dashboard h2 {
+        font-size: 16px;
+    }
+
+    .student-card {
+        padding: 10px;
+    }
+
+    .student-card h3 {
+        font-size: 14px;
+    }
+
+    .student-card p {
+        font-size: 11px;
+    }
+}

@@ -1,0 +1,132 @@
+body{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+
+}
+.topbar{
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    gap: 15px; 
+    margin-bottom: 50px;
+    margin-top: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.pic{
+    border-radius: 20px;
+}
+.immersion{
+    color: #0b59d8;
+    margin: 0;
+}
+
+.backbtn{
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color:#F9A825;
+    border-radius: 20px;
+    color: #0b59d8;
+}
+.text-choose{
+ margin-bottom: 50px;
+ margin-top: 10px;
+}
+.backbtn:hover{
+    background-color: #0b59d8;
+    color: #F9A825;
+    transition: 0.3s;
+}
+.mid{
+    color: #0b59d8
+}
+
+.card-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: -15px;
+  text-align: center;
+   width: 100%;
+   
+}
+.card-link{
+    text-decoration: none;
+    
+}
+.card-link:hover .card{
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+    transition: 0.3s;
+    border-radius: 20px;
+    background-color: #F9A825;
+    color: #0b59d8;    
+}
+.teacher-card{
+  background: #f7f7f7;
+  width: 300px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  margin-top: 0;
+
+}
+.card-link:hover .teacher-card{
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.50);
+    transition: 0.3s;
+    border-radius: 20px;
+    background-color: #0b59d8;
+    color: #F9A825;
+    
+}
+.card-link:hover .teacher-card h2,
+.card-link:hover .teacher-card p {
+    color: #F9A825;
+}
+.card {
+  background: #f7f7f7;
+  width: 300px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  margin-top: 0;
+}
+
+.icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.yellow {
+  background: #fbbf24;
+  color: white;
+  border-radius: 50px;
+}
+
+.blue {
+  background: #1e40af;
+  color: white;
+  border-radius: 50px;
+
+}
+
+h2 {
+  color: #1e3a8a;
+  margin-bottom: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+  color: #4b5563;
+  line-height: 1.6;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

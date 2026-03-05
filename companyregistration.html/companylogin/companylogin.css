@@ -1,0 +1,91 @@
+body{
+    text-align: center;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#head{
+    display: flex;
+  align-items: center;   
+  gap: 15px;
+  justify-content: center;
+  color: #0b59d8;
+  margin-bottom: 30px;
+  margin-top: -40px;
+}
+.img{
+    border-radius: 20px;
+}
+.back{
+    padding: 20px ;
+    background-color: #0b59d8;
+    margin-bottom: 15px;
+    color: aliceblue;
+    text-decoration: none;
+    border-radius: 30px;
+}
+nav{
+    margin: 50px;
+}
+.login-box{
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+    background-color: rgb(255, 255, 255);
+    width: 350px;
+    height: 500px;
+     text-align: center;
+     justify-content: center;
+     margin: 100px auto;
+     margin-top: 30px;
+     border-radius: 30px;
+
+}
+.chat{
+    margin: 0;
+}
+h2{
+margin-bottom: 2px;
+color: #0b59d8;
+}
+.textcred{
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 2px;
+}
+.sign-in.container{
+    padding: 15px;
+}
+input{
+    display: block;
+    width: 310px;
+    outline: none;
+    padding: 15px ;
+    outline: none;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+#btn-login{
+    width: 100%;
+    display: block;
+    margin-top: 15px;
+    padding: 15px 0;
+    color: white;
+    font-size: 15px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    background-color: #0b59d8;
+}
+#btn-register{
+    width: 100%;
+    display: block;
+    margin-top: 15px;
+    padding: 15px 0;
+    color: white;
+    font-size: 15px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    background-color: #0b59d8;
+
+}
