@@ -1,11 +1,89 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Teacher - Student List</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="companypage.css">
 </head>
+
 <body>
-    
+
+<div class="student-container">
+
+    <h2 class="page-title">Student List by Course</h2>
+
+    <!-- Course Filter -->
+    <div class="course-filter">
+        <button onclick="filterCourse('all')">All</button>
+        <button onclick="filterCourse('ABM')">ABM</button>
+        <button onclick="filterCourse('STEM')">STEM</button>
+        <button onclick="filterCourse('HUMSS')">HUMSS</button>
+        <button onclick="filterCourse('ICT')">ICT</button>
+    </div>
+
+
+    <!-- ABM -->
+    <div class="course-section" data-course="ABM">
+        <h3>ABM Students</h3>
+
+        <div class="student-card">
+            <p class="student-name">Juan Dela Cruz</p>
+            <p class="student-email">juan@email.com</p>
+        </div>
+
+        <div class="student-card">
+            <p class="student-name">Maria Santos</p>
+            <p class="student-email">maria@email.com</p>
+        </div>
+
+    </div>
+
+
+    <!-- STEM -->
+    <div class="course-section" data-course="STEM">
+        <h3>STEM Students</h3>
+
+        <div class="student-card">
+            <p class="student-name">Pedro Reyes</p>
+            <p class="student-email">pedro@email.com</p>
+        </div>
+
+    </div>
+
+
+    <!-- HUMSS -->
+    <div class="course-section" data-course="HUMSS">
+        <h3>HUMSS Students</h3>
+
+        <div class="student-card">
+            <p class="student-name">Ana Lopez</p>
+            <p class="student-email">ana@email.com</p>
+        </div>
+
+    </div>
+
+
+    <!-- ICT -->
+    <div class="course-section" data-course="ICT">
+        <h3>ICT Students</h3>
+
+        <div class="student-card">
+            <p class="student-name">Mark Ramos</p>
+            <p class="student-email">mark@email.com</p>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- External JS -->
+<script src="companypage.js"></script>
+
 </body>
 </html>
+```

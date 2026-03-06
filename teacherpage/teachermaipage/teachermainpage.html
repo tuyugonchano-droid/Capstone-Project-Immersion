@@ -124,29 +124,60 @@
 <div class="teacher-dashboard">
     <h2>Student OJT List</h2>
     
+   <div class="teacher-dashboard">
+
+  
+
     <div class="student-list-container">
-        <!-- Ito yung mga student cards na mag-scroll -->
-        <div class="student-card">
+
+        <!-- STUDENT 1 -->
+        <div class="student-card" onclick="openStudentUploads(this)">
+
+            <div class="upload-notif" id="notif-john">0</div>
+
             <h3>John Doe</h3>
-            <p>Course: ABM</p>
-            <p>Company: ABC Corp</p>
-            <p>Status: Pending</p>
+            <p>Course: ABM | Company: ABC Corp</p>
+            <span class="status-badge status-pending">Pending</span>
+
         </div>
 
-        <div class="student-card">
+        <!-- STUDENT 2 -->
+        <div class="student-card" onclick="openStudentUploads(this)">
+
+            <div class="upload-notif" id="notif-jane">0</div>
+
             <h3>Jane Smith</h3>
-            <p>Course: STEM</p>
-            <p>Company: XYZ Inc</p>
-            <p>Status: Approved</p>
+            <p>Course: STEM | Company: XYZ Inc</p>
+            <span class="status-badge status-approved">Approved</span>
+
         </div>
 
-        <div class="student-card">
-            <h3>Mike Johnson</h3>
-            <p>Course: HUMSS</p>
-            <p>Company: DEF Ltd</p>
-            <p>Status: Pending</p>
+        <!-- STUDENT 3 -->
+        <div class="student-card" onclick="openStudentUploads(this)">
+
+            <div class="upload-notif" id="notif-michael">0</div>
+
+            <h3>Michael Cruz</h3>
+            <p>Course: ICT | Company: Tech Solutions</p>
+            <span class="status-badge status-approved">Approved</span>
+
         </div>
+
+        <!-- STUDENT 4 -->
+        <div class="student-card" onclick="openStudentUploads(this)">
+
+            <div class="upload-notif" id="notif-sarah">0</div>
+
+            <h3>Sarah Lopez</h3>
+            <p>Course: HUMSS | Company: Creative Media</p>
+            <span class="status-badge status-pending">Pending</span>
+
+        </div>
+
     </div>
+
+</div>
+</div>
 </div>
 <script src="teachermainpage.js"></script>
 </body>

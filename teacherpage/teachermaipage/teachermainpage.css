@@ -308,60 +308,73 @@
 
 
 .teacher-dashboard {
-    max-width: 800px;
-    margin: 40px auto;
+    width: 95%;            /* Responsive: 95% ng screen sa mobile */
+    max-width: 800px;      /* Maximum width sa desktop */
+    margin: 40px auto;     /* Laging nasa gitna */
     padding: 20px;
+    box-sizing: border-box; 
 }
 
 .teacher-dashboard h2 {
     text-align: center;
-    color: #004AAD;
+    color: #004AAD;        /* Original Blue */
     margin-bottom: 30px;
-    font-size: 24px;
+    font-size: clamp(20px, 5vw, 24px); 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;/* Responsive font size */
 }
 
-/* Scrollable List Container */
+/* 2. Scrollable Box (Ang Kulungan) */
 .student-list-container {
-    max-height: 500px;
-    overflow-y: auto;
-    padding-right: 10px;
+    height: 500px;         /* Fixed height para mag-scroll sa loob */
+    overflow-y: auto;      /* Automatic scrollbar pag lumampas ang content */
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background: #f9f9f9;   /* Original Light Background */
+    
+    /* Flexbox Layout para laging pantay pababa */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;             /* Gaps sa pagitan ng cards */
 }
 
-/* Scrollbar Styling */
+/* 3. Custom Scrollbar (Para saktong Blue) */
 .student-list-container::-webkit-scrollbar {
     width: 8px;
 }
-
 .student-list-container::-webkit-scrollbar-track {
     background: #f1f1f1;
     border-radius: 10px;
 }
-
 .student-list-container::-webkit-scrollbar-thumb {
-    background: #004AAD;
+    background: #004AAD;   /* Original Blue */
     border-radius: 10px;
 }
 
-/* Student Card Styling */
+/* 4. Student Card (Original Style) */
 .student-card {
     background: white;
     padding: 20px;
-    margin-bottom: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    border-left: 5px solid #F9A825;
-    transition: 0.3s;
+    border-left: 6px solid #F9A825; /* Original Yellow/Orange */
+    
+    /* Critical Fix para hindi mapipi ang card */
+    flex-shrink: 0; 
+    width: 100%;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
 }
 
 .student-card:hover {
-    transform: translateX(5px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transform: translateX(5px); /* Swabe na usog pakanan */
 }
 
 .student-card h3 {
     margin: 0 0 10px 0;
-    color: #004AAD;
+    color: #004AAD;        /* Original Blue */
     font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .student-card p {
@@ -370,105 +383,33 @@
     font-size: 14px;
 }
 
-/* Status Badge */
-.status-pending {
-    background: #FFC107;
-    color: white;
-    padding: 3px 10px;
+/* 5. Status Badges */
+.status-badge {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 4px 12px;
     border-radius: 15px;
     font-size: 12px;
-}
-
-.status-approved {
-    background: #4CAF50;
+    font-weight: bold;
     color: white;
-    padding: 3px 10px;
-    border-radius: 15px;
-    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.status-pending { background: #FFC107; }
+.status-approved { background: #4CAF50; }
 
-/* ===============================
-   RESPONSIVE MEDIA QUERIES
-================================= */
-
-/* Tablet (768px and below) */
-@media (max-width: 768px) {
-    .teacher-dashboard {
-        padding: 15px;
-    }
-
-    .teacher-dashboard h2 {
-        font-size: 20px;
-    }
-
-    .student-card {
-        padding: 15px;
-    }
-
-    .student-card h3 {
-        font-size: 16px;
-    }
-
-    .student-card p {
-        font-size: 13px;
-    }
-}
-
-/* Mobile (480px and below) */
-@media (max-width: 480px) {
+/* 6. Media Queries para sa Mobile */
+@media (max-width: 600px) {
     .teacher-dashboard {
         margin: 20px auto;
         padding: 10px;
     }
-
-    .teacher-dashboard h2 {
-        font-size: 18px;
-        margin-bottom: 20px;
-    }
-
+    
     .student-list-container {
-        max-height: 400px;
-    }
-
-    .student-card {
-        padding: 15px;
-        margin-bottom: 10px;
-    }
-
-    .student-card h3 {
-        font-size: 16px;
-    }
-
-    .student-card p {
-        font-size: 12px;
-    }
-
-    .status-pending,
-    .status-approved {
-        font-size: 10px;
-        padding: 2px 8px;
-    }
-}
-
-/* Small Mobile (320px and below) */
-@media (max-width: 320px) {
-    .teacher-dashboard {
-        padding: 5px;
-    }
-
-    .teacher-dashboard h2 {
-        font-size: 16px;
-    }
-
-    .student-card {
+        height: 400px;     /* Paikliin konti ang box sa phone screen */
         padding: 10px;
     }
-
-    .student-card h3 {
-        font-size: 14px;
-    }
-
-    .student-card p {
-        font-size: 11px;
+    
+    .student-card {
+        padding: 15px;     /* Lilitan ang padding sa loob ng card */
     }
 }

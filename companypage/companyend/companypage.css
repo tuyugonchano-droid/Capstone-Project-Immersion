@@ -1,0 +1,93 @@
+```css
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f6fb;
+    margin:0;
+    padding:0;
+}
+
+/* Container */
+
+.student-container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+}
+
+/* Title */
+
+.page-title{
+    text-align:center;
+    color:#004AAD;
+    margin-bottom:25px;
+}
+
+/* Filter Buttons */
+
+.course-filter{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.course-filter button{
+    background:#004AAD;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    margin:5px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.course-filter button:hover{
+    background:#003080;
+}
+
+/* Course Section */
+
+.course-section{
+    margin-bottom:35px;
+}
+
+.course-section h3{
+    color:#333;
+    margin-bottom:15px;
+}
+
+/* Student Card */
+
+.student-card{
+    background:white;
+    border-radius:10px;
+    padding:15px;
+    margin-bottom:10px;
+    box-shadow:0 3px 8px rgba(0,0,0,0.1);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.student-name{
+    font-weight:600;
+}
+
+.student-email{
+    font-size:13px;
+    color:gray;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .student-card{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:5px;
+    }
+
+}
+```
