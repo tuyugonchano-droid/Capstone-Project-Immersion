@@ -1,42 +1,111 @@
 const tabs = document.querySelectorAll(".tab");
-const cards = document.querySelectorAll(".card");
 const groupLogo = document.getElementById("groupLogo");
 const companyContainer = document.getElementById("companyContainer");
 
-tabs.forEach(tab => {
 
-    tab.addEventListener("click", () => {
+// SAMPLE DATA (temporary habang wala pang backend)
 
-        tabs.forEach(btn => btn.classList.remove("active"));
-        tab.classList.add("active");
+let companies = [
 
-        const category = tab.dataset.category;
+{
+name:"ABC Accounting Firm",
+description:"Business internship opportunity",
+category:"ABM"
+},
 
-        if(category === "all"){
+{
+name:"Future Science Lab",
+description:"Engineering research company",
+category:"STEM"
+},
 
-            groupLogo.style.display = "block";
-            companyContainer.style.display = "none";
+{
+name:"WebTech Solutions",
+description:"Web and mobile development",
+category:"IT-MAWT"
+},
 
-        }else{
+{
+name:"Creative Pixel Studio",
+description:"Multimedia design agency",
+category:"Digital Arts"
+}
 
-            groupLogo.style.display = "none";
-            companyContainer.style.display = "grid";
+];
 
-            cards.forEach(card =>{
 
-                if(card.dataset.category === category){
-                    card.style.display = "block";
-                }else{
-                    card.style.display = "none";
-                }
+// RENDER COMPANIES
 
-            });
+function renderCompanies(category){
 
-        }
+companyContainer.innerHTML = "";
 
-    });
+companies.forEach(company =>{
+
+if(category === "all" || company.category === category){
+
+let card = document.createElement("div");
+
+card.classList.add("card");
+
+card.dataset.category = company.category;
+
+card.innerHTML = `
+<h3>${company.name}</h3>
+<p>${company.description}</p>
+<button class="apply-btn">Apply</button>
+`;
+
+companyContainer.appendChild(card);
+
+}
 
 });
+
+}
+
+
+// TAB FILTER
+
+tabs.forEach(tab =>{
+
+tab.addEventListener("click", () =>{
+
+tabs.forEach(btn => btn.classList.remove("active"));
+
+tab.classList.add("active");
+
+let category = tab.dataset.category;
+
+if(category === "all"){
+
+groupLogo.style.display = "block";
+
+companyContainer.style.display = "none";
+
+}else{
+
+groupLogo.style.display = "none";
+
+companyContainer.style.display = "grid";
+
+renderCompanies(category);
+
+}
+
+});
+
+});
+
+
+// PAGE LOAD
+
+document.addEventListener("DOMContentLoaded", () => {
+
+companyContainer.style.display = "none";
+
+});
+
 
 document.addEventListener("DOMContentLoaded", function(){
 

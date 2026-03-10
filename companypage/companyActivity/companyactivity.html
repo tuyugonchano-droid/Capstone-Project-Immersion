@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ImmersionHub - Assign Activity</title>
+
+<link rel="stylesheet" href="companyactivity.css">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<h3 class="sidebar-title">Supervisor Panel</h3>
+
+<ul class="sidebar-menu">
+<li><a href="../companydashboard/companydashboard.html">Dashboard</a></li>
+<li><a href="../companyprogresstracker/companyprogresstracker.html">Student Progress</a></li>
+<li><a href="#">Activity</a></li>
+<li><a href="#">Assign Activity</a></li>
+<li><a href="#">Reports</a></li>
+</ul>
+
+</div>
+
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+
+<div class="header">
+
+<div class="logo">
+<div class="logo-box"></div>
+<h2>ImmersionHub</h2>
+</div>
+
+
+
+</div>
+
+<div class="container">
+
+<!-- ASSIGN ACTIVITY -->
+
+<div class="card">
+
+<h3>Assign Student Activity</h3>
+
+<div class="form-grid">
+
+<select id="student">
+<option value="">Select Student</option>
+<option>Juan Dela Cruz</option>
+<option>Maria Santos</option>
+<option>Carlo Reyes</option>
+</select>
+
+<input type="date" id="deadline">
+
+<input type="text" id="title" placeholder="Activity Title">
+
+<select id="priority">
+<option value="">Priority</option>
+<option value="High">High</option>
+<option value="Medium">Medium</option>
+<option value="Low">Low</option>
+</select>
+
+</div>
+
+<textarea id="description" placeholder="Activity Description"></textarea>
+
+<br><br>
+
+<button class="assign-btn" onclick="assignActivity()">Assign Activity</button>
+
+</div>
+
+<!-- ACTIVITY TABLE -->
+
+<div class="card">
+
+<h3>Assigned Activities</h3>
+
+<table>
+
+<thead>
+<tr>
+<th>Student</th>
+<th>Activity</th>
+<th>Deadline</th>
+<th>Priority</th>
+<th>Status</th>
+</tr>
+</thead>
+
+<tbody id="activityTable">
+
+<tr>
+<td>Juan Dela Cruz</td>
+<td>Create website layout</td>
+<td>2026-03-10</td>
+<td class="priority-high">High</td>
+<td>Assigned</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+<script src=""></script>
+
+</body>
+</html>
