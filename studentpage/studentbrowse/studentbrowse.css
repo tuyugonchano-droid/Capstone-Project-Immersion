@@ -99,13 +99,7 @@ header {
     font-size: 14px;
     cursor: pointer;
     text-align: center;
-    transition: background 0.2s;
     text-decoration: none;
-}
-
-.dropdown-menu button:hover,
-.dropdown-menu a:hover {
-    background: rgba(255,255,255,0.05);
 }
 
 /* ===== TABS ===== */
@@ -126,11 +120,6 @@ header {
     cursor: pointer;
     font-weight: bold;
     background: white;
-    transition: 0.3s;
-}
-
-.tab:hover {
-    background: #eab308;
 }
 
 .tab.active {
@@ -151,11 +140,46 @@ header {
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-.card:hover {
-    transform: translateY(-6px);
+.company-card-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 2px solid #F9A825;
+}
+
+.card h3 {
+    margin: 10px 0;
+    color: #1e40af;
+    font-size: 16px;
+}
+
+.card p {
+    margin: 5px 0;
+    font-size: 13px;
+    color: #555;
+}
+
+.card strong {
+    color: #1e40af;
+}
+
+.apply-btn {
+    margin-top: 15px;
+    padding: 10px 25px;
+    background: #F9A825;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 /* ===== MOBILE RESPONSIVE ===== */

@@ -35,39 +35,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
-
-const assignmentData = {
-    company: "ABC Corporation",
-    status: "Currently Assigned",
-    todos: [
-        { title: "Submit Weekly Report", due: "Mar 3, 2026" },
-        { title: "Mentor Evaluation Form", due: "Mar 7, 2026" },
-        { title: "Mid-term Assessment", due: "Mar 15, 2026" },
-        { title: "Final Portfolio", due: "Apr 1, 2026" }
-    ]
-};
-
-document.getElementById("companyName").textContent = assignmentData.company;
-document.getElementById("assignmentStatus").textContent = assignmentData.status;
-
-const todoContainer = document.getElementById("todoList");
-
-assignmentData.todos.forEach(task => {
-
-    const taskRow = document.createElement("div");
-    taskRow.classList.add("todo-item");
-
-    taskRow.innerHTML = `
-        <input type="checkbox" class="todo-checkbox">
-        <div class="todo-details">
-            <p class="todo-title">${task.title}</p>
-            <p class="todo-due">Due: ${task.due}</p>
-        </div>
-    `;
-
-    todoContainer.appendChild(taskRow);
-});
-
+async function loadAssignment(){
+    try{
+        const response = await fetch("api/getAssigment.php");
+        const assignmentData = await response.json();
+        
+        document.getElementById("companyName").textContent = assignmentData.company;
+        document.getElementById("asssignmentStatus").textContent = assignmentData.status;
+        
+        const todoContainer = document.getElementById("todoList");
+        todoContainer.innerHTML = "";
+        assignmentData.todos.forEach(task =>{
+            const taskRow = document.createElement("div");
+            taskRow.classList.add("todo-item");
+            taskRow.innerHTML = `<input type = "chechbox" class = "todo-checkbox">
+            <div class = "todo-details">
+            <p class = "todo-title">${task.deadline}</p>
+            <p class = "todo-due"> Due: ${task.deadline}</p> `;
+            todoContainer.appendChild(taskRow);
+        });
+    }catch(error){
+        console.error("Error loading assignments:", error);
+    }
+}
+loadAssignment();
 
 const fileInput = document.getElementById("journalFile");
 const selectBtn = document.getElementById("selectFileBtn");

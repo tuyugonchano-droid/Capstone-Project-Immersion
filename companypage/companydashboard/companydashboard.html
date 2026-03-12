@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ImmersionHub - Supervisor Dashboard</title>
+
+<link rel="stylesheet" href="companydashboard.css">
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+    <!-- SIDEBAR -->
+<div class="sidebar">
+
+<div class="sidebar-logo">
+<div class="logo-box"></div>
+<span>ImmersionHub</span>
+</div>
+
+<nav class="sidebar-menu">
+<a class="active" href="#">Dashboard</a>
+<a href="../companyprogresstracker/companyprogresstracker.html">Students Progress</a>
+<a href="../companyActivity/companyactivity.html">Activity</a>
+<a href="#">Evaluations</a>
+<a href="#">Reports</a>
+</nav>
+
+</div>
+
+<!-- SIDEBAR -->
+
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+
+<div class="header">
+
+<div class="header-left">
+
+
+</div>
+
+<div class="profile">
+
+<div class="profile-trigger" onclick="toggleMenu()">
+<img src="https://i.pravatar.cc/100">
+<span>Supervisor</span>
+</div>
+
+<div class="profile-menu" id="profileMenu">
+<a href="../companyprofile/companyprofile.html">My Profile</a>
+<a href="#">Logout</a>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="container">
+
+<!-- DASHBOARD WIDGETS -->
+
+<div class="cards">
+
+<div class="card">
+<h3>Students Assigned</h3>
+<div class="card-number">12</div>
+</div>
+
+<div class="card">
+<h3>Pending Evaluations</h3>
+<div class="card-number">5</div>
+</div>
+
+<div class="card">
+<h3>Submitted Journals</h3>
+<div class="card-number">18</div>
+</div>
+
+<div class="card">
+<h3>Total Hours Logged</h3>
+<div class="card-number">425 hrs</div>
+</div>
+
+</div>
+
+
+<!-- STUDENTS -->
+
+<div class="section-title">Students Assigned</div>
+
+<div class="students">
+
+<div class="student-card">
+
+<img src="https://i.pravatar.cc/101">
+
+<div class="student-name">Juan Dela Cruz</div>
+
+<div class="strand">ICT Strand</div>
+
+<div class="progress">
+<div class="progress-bar" style="width:60%"></div>
+</div>
+
+<div>60% Hours Completed</div>
+
+<button class="view-btn">View Progress</button>
+
+</div>
+
+
+<div class="student-card">
+
+<img src="https://i.pravatar.cc/102">
+
+<div class="student-name">Maria Santos</div>
+
+<div class="strand">STEM</div>
+
+<div class="progress">
+<div class="progress-bar" style="width:40%"></div>
+</div>
+
+<div>40% Hours Completed</div>
+
+<button class="view-btn">View Progress</button>
+
+</div>
+
+
+<div class="student-card">
+
+<img src="https://i.pravatar.cc/103">
+
+<div class="student-name">Carlo Reyes</div>
+
+<div class="strand">ABM</div>
+
+<div class="progress">
+<div class="progress-bar" style="width:75%"></div>
+</div>
+
+<div>75% Hours Completed</div>
+
+<button class="view-btn">View Progress</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+<script src="companydashboard.js"></script>
+
+</body>
+</html>

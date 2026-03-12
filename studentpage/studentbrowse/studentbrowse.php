@@ -1,3 +1,16 @@
+<?php
+$conn = new mysqli("localhost","root","","immersionhub");
+if($conn->connect_error){
+    die("Connection failed: " . $conn->connect_error);
+}
+$result = $conn->query("SELECT * FROM companies ORDER BY companyname ASC");
+$companies = [];
+if($result && $result->num_rows > 0){
+    while($row = $result->fetch_assoc()){
+        $companies[] = $row;
+    }
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +35,7 @@
         <div class="header-right">
             <div class="profile" id="profileBtn">
                 <img src="profile.jpg" class="profile-img">
-                <span class="profile-name">Nigga</span>
+                <span class="profile-name">Student</span>
             </div>
 
             <div class="dropdown-menu" id="dropdownMenu">
@@ -37,7 +50,7 @@
         <button class="tab" data-category="ABM">ABM</button>
         <button class="tab" data-category="HUMSS">HUMSS</button>
         <button class="tab" data-category="STEM">STEM</button>
-        <button class="tab" data-category="IT-MAWT">IT MAWT</button>
+        <button class="tab" data-category="IT MAWT">IT MAWT</button>
         <button class="tab" data-category="Digital Arts">Digital Arts</button>
         <button class="tab" data-category="Culinary Arts">Culinary Arts</button>
         <button class="tab" data-category="TOP">TOP</button>
@@ -48,7 +61,7 @@
 <!-- Logo Section -->
 
 <section id="groupLogo">
- 
+
     <h2>Welcome to Our Partner Companies</h2>
     <p>Select a strand above to view companies.</p>
 
@@ -61,6 +74,11 @@
 <!-- Companies will be generated here dynamically by JavaScript -->
 
 </section>
+
+<!-- Pass PHP data to JavaScript -->
+<script>
+var companiesFromDB = <?php echo json_encode($companies); ?>;
+</script>
 
 <script src="studentbrowse.js"></script>
 
